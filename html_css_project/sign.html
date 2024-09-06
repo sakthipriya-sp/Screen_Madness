@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenMadness Signup</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://i.pinimg.com/originals/ab/6c/23/ab6c23eac2a8dcd1ac891c193a6b9d62.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(78, 76, 76, 0.8); /* Darker background for better contrast */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+           width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        input[type="text"]::placeholder, input[type="password"]::placeholder, input[type="email"]::placeholder {
+            color: #bbb;
+            font-style: italic;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ffca28;
+            color: #333;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #ffb74d;
+        }
+        .social-signup {
+            margin-top: 20px;
+        }
+        .social-signup a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-right: 50px;">
+        <h1>Join the Fun!</h1>
+        <form>
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="password" placeholder="Confirm" name="confirm-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="social-signup">
+            <p>Or sign up with:</p>
+            <!-- Example social icons -->
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s" alt="Facebook" width="24"></a>
+            <a href="#"><img src="https://pbs.twimg.com/profile_images/1683508200069296129/KM80Wkfx_400x400.jpg" alt="Twitter" width="24"></a>
+        </div>
+        <p><a href="C:\Users\hp\Documents\html_css_project\login.html" style="color: #ffca28;">Already a member? Sign In</a></p>
+    </div>
+</body>
+</html>

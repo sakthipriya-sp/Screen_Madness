@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  body {
+    background-image: url(https://img.freepik.com/premium-photo/background-hyper-realistic-colorful-beautiful-wallpaper-hd-best-quality-image_859483-395989.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .banner-container {
+    position: relative;
+    /* Adjust to your image width */
+    overflow: hidden;
+  }
+
+  .banner-content {
+    position: absolute;
+    top: 100%;
+    /* Initially hidden below the image */
+    width: 200px;
+    height: 80px;
+    background-color: rgba(10, 0, 0, 0.7);
+    color: rgb(252, 250, 250);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: top 0.5s ease;
+  }
+
+  .banner-container:hover .banner-image {
+    transform: translateY(-100%);
+  }
+
+  .banner-container:hover .banner-content {
+    top: 0;
+  }
+
+  .search {
+    transition: transform 0.3s ease;
+  }
+
+  .search:active {
+    transform: scale(1.1);
+    opacity: 1.0;
+  }
+
+  img {
+    transition: transform 0.3s ease;
+
+  }
+
+  img:active {
+    transform: scale(1.1);
+    opacity: 1.0;
+  }
+</style>
+
+<body>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container-fluid text-white text-center" style="margin-top: 25px;">
+        <input type="text" class="search" name="" id="" placeholder="🔍 &nbsp;&nbsp;Search for movies and series"
+          style="border-radius:8px; border: 1.5px solid black; width: 300px; height: 40px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"
+          src="https://m.media-amazon.com/images/M/MV5BNjgxZTMxNmQtZGFkZS00NDUyLTllMzYtOTE0ZjdlMjM1ZWU0XkEyXkFqcGdeQXVyMTAyMTE1MDA1._V1_.jpg"
+          style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(649K)</p>
+        </div>
+        <div class="offcanvas offcanvas-bottom" id="demo">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://image.airtel.tv/content/SONYLIV_VOD/TVSHOW/SONYLIV_VOD_TVSHOW_1700000292/Scam_1993.jpg"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.sonyliv.com/shows/scam-1992-the-harshad-mehta-story-1700000292'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>SCAM1992</h3>
+                <p>*"Scam 1992: The Harshad Mehta Story"* is an Indian web series based on the true story of the 1992
+                  Indian stock market scam, masterminded by stockbroker Harshad Mehta. Directed by Hansal Mehta, the
+                  series is an adaptation of the book "The Scam: Who Won, Who Lost, Who Got Away" by journalists Sucheta
+                  Dalal and Debashis Basu. It follows Mehta's rise in the stock market, his manipulation of the system,
+                  and his eventual downfall, which exposed major loopholes in India's financial sector. The series is
+                  lauded for its gripping narrative, strong performances, especially by Pratik Gandhi as Harshad Mehta,
+                  and its authentic portrayal of the financial world in 1990s India.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤 user1534</h6>
+                <p style="background-color: antiquewhite;">It’s a gripping tale of Harshad Mehta’s rise and fall, with
+                  standout performances and sharp storytelling.</p>
+                <h6 style="background-color: gainsboro;">👤 Gojo</h6>
+                <p style="background-color: antiquewhite;">It’s a gripping tale of Harshad Mehta’s rise and fall, with
+                  standout performances and sharp storytelling.</p>
+                <h6 style="background-color: gainsboro;">👤 TOm holland</h6>
+                <p style="background-color: antiquewhite;">It’s a gripping tale of Harshad Mehta’s rise and fall, with
+                  standout performances and sharp storytelling.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (649K)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1"
+          src="https://m.media-amazon.com/images/M/MV5BODI0OGIxM2MtZTQ0YS00ZjhhLWE3YzYtYzE2N2JkNThmY2RkXkEyXkFqcGdeQXVyODkzMzE0Nzc@._V1_FMjpg_UX1000_.jpg"
+          style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(460K)</p>
+        </div>
+        <div class="offcanvas offcanvas-bottom" id="demo1">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhR1mkJf--7LgENZF0Lltpzw5SD4AGDtAN3A&s"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.netflix.com/title/80200575'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>ALICE IN THE BORDERLAND II</h3>
+                <p>*"Alice in Borderland Season 2"* continues the thrilling journey of Arisu and his friends as they face even more dangerous and complex games in a dystopian Tokyo. This season delves deeper into the mysteries of the Borderland, revealing the true nature of the games and the masterminds behind them. With high-stakes action, intense psychological drama, and unexpected twists, the series keeps viewers on the edge of their seats as the characters fight for survival and search for a way back to the real world.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤 user19o4</h6>
+                <p style="background-color: antiquewhite;">Alice in Borderland ramps up the tension with even more intense games and mind-bending twists, keeping you hooked from start to finish.
+                  standout performances and sharp storytelling.</p>
+                <h6 style="background-color: gainsboro;">👤 Maxwell Rivers</h6>
+                <p style="background-color: antiquewhite;">It delivers thrilling gameplay and deeper mysteries, making it a captivating and relentless ride.</p>
+                <h6 style="background-color: gainsboro;">👤 Sienna Blake</h6>
+                <p style="background-color: antiquewhite;">Alice in Borderland ups the ante with gripping games and shocking reveals, making it an irresistible binge-watch.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (460K)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2"
+        src="https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(1.1B)</p>
+        </div>
+        <div class="offcanvas offcanvas-bottom" id="demo2">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://flixpatrol.com/runtime/cache/files/posters/d/w350/ddlemu3ez0pgg93k2svnlcjcsve.jpg"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.netflix.com/title/81040344'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>SQUID GAME</h3>
+                <p>Squid Game" is a South Korean series where financially desperate contestants compete in deadly children's games for a massive cash prize. The show explores themes of survival, human nature, and societal inequality, blending intense drama with suspenseful twists."Squid Game" follows a group of financially struggling individuals who participate in high-stakes, deadly versions of children's games for a chance to win a life-changing fortune. The series delves into the dark side of human nature, exploring themes of desperation, morality, and inequality, all while delivering heart-pounding suspense and shocking twists.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤 Liam Carter</h6>
+                <p style="background-color: antiquewhite;">Squid Game is a thrilling rollercoaster with intense games and a sharp commentary on society’s flaws—definitely a binge-worthy watch.</p>
+                <h6 style="background-color: gainsboro;">👤 Ava Morgan</h6>
+                <p style="background-color: antiquewhite;">The series combines gripping suspense with deep social critique, making every episode a must-see and keeping you hooked till the end.</p>
+                <h6 style="background-color: gainsboro;">👤 Jasper Leee</h6>
+                <p style="background-color: antiquewhite;">Squid Game offers a unique and chilling take on survival dramas, blending high-stakes action with profound insights into human nature.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (1.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo3"
+        src="https://m.media-amazon.com/images/M/MV5BZDdjYmZlMzQtN2JmZS00N2JkLTg4MGYtMGI3OGVhMWQ1MzMyXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(3.2B)</p>
+        </div>
+        <div class="offcanvas offcanvas-bottom" id="demo3">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://lh3.googleusercontent.com/ZIyMTsfp5FAOA63fwMVzakG0-S0hw6fMcB2aroVbNPw7pzrh_30JoHfgacKTisn6o-PSz_vGv106l5hUIHLX_16Eig=s1280-w1280-h800"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.netflix.com/title/80192098'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>MONEY HEIST</h3>
+                <p>"Money Heist" (La Casa de Papel) follows a criminal mastermind known as "The Professor" who recruits a group of skilled robbers to execute an ambitious plan to rob the Royal Mint of Spain and later, the Bank of Spain. The series combines high-stakes heists with intense character dynamics, exploring themes of loyalty, love, and rebellion. Its fast-paced plot, intricate planning, and emotional depth make it a gripping watch."The Professor," execute meticulously planned heists on the Royal Mint and the Bank of Spain. The show blends intense action, clever strategy, and deep emotional drama as the robbers face both external forces and internal conflicts. With its captivating characters and unexpected twists, it’s a thrilling exploration of crime, trust, and resistance.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Riley Quin</h6>
+                <p style="background-color: antiquewhite;">Money Heist is an exhilarating thrill ride with clever heist plots and deeply engaging characters, making it a binge-worthy series from start to finish.</p>
+                <h6 style="background-color: gainsboro;">👤Zoe Collins</h6>
+                <p style="background-color: antiquewhite;">The series masterfully blends high-stakes action with rich character development, creating a gripping and emotional rollercoaster that keeps you hooked.</p>
+                <h6 style="background-color: gainsboro;">👤 JDylan Reede</h6>
+                <p style="background-color: antiquewhite;">With its smart storytelling and intense drama, Money Heist delivers a fresh and addictive take on the heist genre, packed with twists and turns.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (3.2B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo4"
+        src="https://m.media-amazon.com/images/M/MV5BYWIwYTg2Y2YtYzEwNy00Y2Y0LWFkZjktNjBlMWZhNDY2NGE0XkEyXkFqcGdeQXVyNDY5MjMyNTg@._V1_.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(862K)</p>
+        </div>
+ <div class="offcanvas offcanvas-bottom" id="demo4">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrvoyLevWl5tFdwHGvxdtdg0C8CxEwqzvU5V2Vd8-LpzSPmu7iR2XF1RXEYvQRFarjS_E&usqp=CAU"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.netflix.com/title/81365087'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>VINCENZO</h3>
+                <p>"Vincenzo" is a South Korean drama about Vincenzo Cassano, a Korean-Italian mafia consigliere who returns to Korea after a betrayal. He uses his criminal expertise to exact revenge and bring justice, while forming an unlikely alliance with a feisty lawyer. The series blends dark humor, intense action, and legal drama, offering a unique mix of crime and comedy with a charismatic lead and engaging plot twists.Upon discovering corruption and crime in a local law firm, he teams up with a sharp-witted lawyer to take down powerful enemies. The show combines dark comedy, high-stakes legal battles, and thrilling action, creating a dynamic and entertaining narrative with a charismatic lead and unexpected twists.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Anastasia Ivanova </h6>
+                <p style="background-color: antiquewhite;">Vincenzo is a thrilling blend of dark humor and intense drama, with a charismatic lead and a gripping plot that keeps you hooked from start to finish.</p>
+                <h6 style="background-color: gainsboro;">👤pooja</h6>
+                <p style="background-color: antiquewhite;">The series offers a unique mix of crime, comedy, and legal drama, delivering sharp dialogue and unexpected twists that make it a standout watch.</p>
+                <h6 style="background-color: gainsboro;">👤 Aarav Patel</h6>
+                <p style="background-color: antiquewhite;">With its clever storytelling and engaging characters, Vincenzo provides a fresh and entertaining take on the legal and crime genres, making it a must-see.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (862k)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo5"
+        src="https://i.scdn.co/image/ab67616d0000b273e710c1f5b228046932790031"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(6.1B)</p>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom" id="demo5">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BMTM0NjUxMDk5MF5BMl5BanBnXkFtZTcwNDMxNDY3Mw@@._V1_.jpg"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.primevideo.com/dp/amzn1.dv.gti.20b4c3cf-b703-aebb-41bd-0dc683f8c0c8?autoplay=0&ref_=atv_cf_strg_wb'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>SHAWSHANK REDEMPTION</h3>
+                <p>"The Shawshank Redemption" is a timeless classic that tells the story of Andy Dufresne, a banker wrongly imprisoned for the murder of his wife and her lover. Set in Shawshank State Penitentiary, the film explores Andy’s resilience and hope as he befriends fellow inmate Ellis "Red" Redding. Over the years, Andy uses his skills to help the corrupt prison staff while quietly planning his escape. The film is a powerful tale of friendship, perseverance, and the human spirit, renowned for its strong performances, particularly by Tim Robbins and Morgan Freeman, and its uplifting message. Based on a Stephen King novella, it remains one of the most beloved and critically acclaimed films of all time.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Ethan Miller</h6>
+                <p style="background-color: antiquewhite;">The Shawshank Redemption left me deeply motivated—it’s a powerful reminder that hope and perseverance can overcome even the darkest of circumstances.</p>
+                <h6 style="background-color: gainsboro;">👤Ishaan Mehta</h6>
+                <p style="background-color: antiquewhite;">Watching The Shawshank Redemption was an emotional journey; it’s incredible how Andy’s quiet determination and resourcefulness turned a grim situation into something inspiring.</p>
+                <h6 style="background-color: gainsboro;">👤 Arooba</h6>
+                <p style="background-color: antiquewhite;">The Shawshank Redemption is a masterpiece that I absolutely love—its portrayal of friendship, hope, and the triumph of the human spirit resonates deeply every time I watch it.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (6.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo6"
+        src="https://m.media-amazon.com/images/S/pv-target-images/ed0e203e77f4f83ee5d50492b3b65d03e6b751f295b3d35f5e09dc1329bf01d8.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(3.8B)</p>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom" id="demo6">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://d27csu38upkiqd.cloudfront.net/eyJidWNrZXQiOiJmZGMtc2l0ZXB1YmxpYy1tZWRpYS1wcm9kIiwia2V5IjoidXBsb2Fkc1wvMjAyM1wvMDNcLzE0MzM0NC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE2MDAsImZpdCI6ImNvdmVyIn19fQ=="
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.amazon.com/Truman-Show-Jim-Carrey/dp/B002SGYPS2'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>THE TRUMAN SHOW</h3>
+                <p>"The Truman Show" is a thought-provoking film that explores the life of Truman Burbank, a man who unknowingly lives his entire life as the star of a reality TV show. Directed by Peter Weir and starring Jim Carrey, the movie delves into themes of free will, privacy, and the nature of reality as Truman begins to question the world around him. As he discovers the truth, the film takes viewers on an emotional journey that blends drama, comedy, and philosophical reflection. With its unique premise, powerful performances, and deep social commentary, The Truman Show is a timeless exploration of human curiosity and the desire for authenticity in a world increasingly dominated by media and illusion.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Samantha Clark</h6>
+                <p style="background-color: antiquewhite;">The Truman Show is incredibly inspiring—it reminds us of the power of questioning our reality and the courage it takes to seek the truth, no matter the cost.</p>
+                <h6 style="background-color: gainsboro;">👤Lucas Bennett</h6>
+                <p style="background-color: antiquewhite;">I absolutely love The Truman Show—its unique concept and Jim Carrey’s brilliant performance create a film that’s both entertaining and deeply moving.</p>
+                <h6 style="background-color: gainsboro;">👤 Arjun Rao123</h6>
+                <p style="background-color: antiquewhite;">I deeply admire The Truman Show for its thought-provoking narrative and sharp social commentary, making it a cinematic gem that continues to resonate with audiences.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (6.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo7"
+        src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p3531967_p_v13_an.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐</p>
+          <p style="text-align: center;font-family: 'Times New Roman', Times, serif;">(860K)</p>
+        </div>
+        <div class="offcanvas offcanvas-bottom" id="demo7">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://play-lh.googleusercontent.com/jalongU-EtEyIVLHphasHtuoJML1ROTMFUXizvzGQ_zq2B0JBZYkcVLC7FUq61f9Yll9ClMzHfuXNUNx3w"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.jiocinema.com/movies/shutter-island/3871900/watch?utm_source=WatchAction&utm_medium=MovieWatchAction&utm_campaign=shutter-island'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>SHUTTER ISLAND</h3>
+                <p>"Shutter Island" is a psychological thriller directed by Martin Scorsese, starring Leonardo DiCaprio as U.S. Marshal Teddy Daniels. Set in 1954, the film follows Teddy and his partner as they investigate the disappearance of a patient from the Ashecliffe Hospital, a mental institution on Shutter Island. As the investigation deepens, Teddy uncovers unsettling truths about the hospital, his own past, and the nature of reality itself. The film is a masterful blend of suspense, mystery, and psychological horror, with a haunting atmosphere and plot twists that challenge perceptions and keep viewers on edge. With its stunning cinematography, intense performances, and complex narrative, Shutter Island is a gripping exploration of the human mind and the fine line between sanity and madness.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Maya Singh</h6>
+                <p style="background-color: antiquewhite;">Shutter Island is a mind-bending thriller that kept me guessing until the very end—its twists and turns are both shocking and brilliantly executed.</p>
+                <h6 style="background-color: gainsboro;">👤Jackson Wright</h6>
+                <p style="background-color: antiquewhite;">The film’s eerie atmosphere and Leonardo DiCaprio’s intense performance make Shutter Island a haunting and unforgettable cinematic experience.</p>
+                <h6 style="background-color: gainsboro;">👤 @Lena Foster</h6>
+                <p style="background-color: antiquewhite;">Shutter Island is a masterclass in psychological storytelling, with a narrative that skillfully blurs the lines between reality and illusion, leaving a lasting impact.
+
+
+
+
+
+
+
+                </p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (6.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo8"
+        src="https://m.media-amazon.com/images/M/MV5BODkwMTgxNjA2NF5BMl5BanBnXkFtZTgwMDc0OTcwOTE@._V1_.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        
+    
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(1.2B)</p>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom" id="demo8">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/e/eb/The_Wailing_%28film%29.png"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.primevideo.com/dp/amzn1.dv.gti.fcb93b0f-0e22-716f-c4af-df8f5992d122?autoplay=0&ref_=atv_cf_strg_wb'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>THE WAILING</h3>
+                <p>"The Wailing" is a South Korean horror-thriller directed by Na Hong-jin, set in a remote village that becomes plagued by a mysterious illness and a series of brutal murders. The story follows a bumbling police officer, Jong-goo, as he investigates the strange occurrences, which many villagers believe are linked to a reclusive Japanese stranger. As Jong-goo delves deeper, the line between reality and the supernatural blurs, leading him to confront ancient curses, shamans, and malevolent forces beyond his understanding. The film masterfully blends elements of horror, mystery, and psychological drama, creating an atmosphere of dread and suspense. With its complex narrative, striking visuals, and intense performances, The Wailing is a gripping and unsettling exploration of fear, faith, and the unknown.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤SRavi Desai</h6>
+                <p style="background-color: antiquewhite;">The Wailing is a haunting and unpredictable journey into the supernatural, with a story that keeps you on edge and questioning reality until the very end.</p>
+                <h6 style="background-color: gainsboro;">👤Alex Thompson</h6>
+                <p style="background-color: antiquewhite;">The film’s eerie atmosphere and intricate plot make The Wailing a standout in horror, blending folklore with chilling suspense that lingers long after the credits roll.</p>
+                <h6 style="background-color: gainsboro;">👤 Auna Kim</h6>
+                <p style="background-color: antiquewhite;">The Wailing is a masterful horror film that captivates with its blend of psychological tension, cultural mysticism, and terrifying twists, leaving a deep, unsettling impact.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (6.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo9"
+src="https://popcornsg.s3.amazonaws.com/gallery/1695859568-chithha.jpg"
+style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(162K)</p>
+        </div>
+        <div class="offcanvas offcanvas-bottom" id="demo9">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/chithha-et00370563-1695623173.jpg"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.hotstar.com/in/movies/chithha/1260157262?utm_source=gwa'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>CHITHHA</h3>
+                <p>"Chitha" is a Tamil action-thriller that follows the intense and emotional journey of a man seeking justice for a personal tragedy. The story delves into themes of revenge, loss, and redemption, as the protagonist confronts powerful adversaries and uncovers deep-seated corruption. With its gripping narrative, strong performances, and high-octane action sequences, Chitha offers a compelling and intense cinematic experience that keeps viewers engaged from start to finish. The film's raw emotion and suspenseful plot make it a standout in the genre.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Ananya Ramesh</h6>
+                <p style="background-color: antiquewhite;">I was completely drawn into Chitha—the characters felt real, and the suspense kept me guessing all the way through.</p>
+                <h6 style="background-color: gainsboro;">👤kala</h6>
+                <p style="background-color: antiquewhite;">Chitha is an emotional rollercoaster that blends intense action with a heartfelt story—definitely a film that sticks with you long after it’s over.</p>
+                <h6 style="background-color: gainsboro;">👤 Amit</h6>
+                <p style="background-color: antiquewhite;">Chitha hit all the right notes for me—it's got powerful performances, a gripping storyline, and just the right amount of action and emotion.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (6.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo0"
+        src="https://m.media-amazon.com/images/M/MV5BYTYxODk2NGMtM2Q0Yi00MmEzLTlkZDYtOGZhNzRhZmViOTY0XkEyXkFqcGc@._V1_.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(162K)</p>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom" id="demo0">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://www.thomasmason.co.uk/wp-content/uploads/2023/04/SEO-1920x1080_PB.jpg"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.netflix.com/in/title/80002479?source=35'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>PEAKY BLINDERS</h3>
+                <p>"Peaky Blinders"* is a British crime drama series set in post-World War I Birmingham, centered around the Shelby family, led by the ambitious and cunning Tommy Shelby. The show explores their rise from a small-time gang to a powerful criminal empire, navigating political intrigue, rival gangs, and personal struggles. With its stylish cinematography, sharp dialogue, and compelling performances, particularly by Cillian Murphy as Tommy Shelby, *Peaky Blinders* combines historical drama with a gripping narrative, delivering a mix of crime, family drama, and period detail that keeps viewers hooked.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Emma59#</h6>
+                <p style="background-color: antiquewhite;">Peaky Blinders is an electrifying watch with its sharp writing and stylish presentation—Cillian Murphy’s performance as Tommy Shelby is absolutely magnetic.</p>
+                <h6 style="background-color: gainsboro;">👤anatnt:)</h6>
+                <p style="background-color: antiquewhite;">The series effortlessly blends historical drama with gritty crime storytelling, making Peaky Blinders a thrilling ride from start to finish.</p>
+                <h6 style="background-color: gainsboro;">👤 willa\iam</h6>
+                <p style="background-color: antiquewhite;">Peaky Blinders offers a captivating glimpse into the world of post-war Birmingham, with a gripping plot and standout performances that make it a must-watch.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (6.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+      <div class="col-sm-3 banner-container">
+        <img type="button" data-bs-toggle="offcanvas" data-bs-target="#demo!"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Oppenheimer_%28film%29.jpg/220px-Oppenheimer_%28film%29.jpg"
+        style="height: 250px; width: 200px;border: 2px solid #fff;border-radius: 20px;" alt="">
+        <div class="banner-content">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐</p>
+          <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">(162K)</p>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom" id="demo!">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body" style="height: 100%;">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  src="https://rlterryreelview.com/wp-content/uploads/2023/07/oppenheimer_1.jpeg"
+                  style="height: 230px;width: 280px;" alt=""><br><br>
+                <div class="btn btn-primary"
+                  onclick="location.href='https://www.jiocinema.com/movies/oppenheimer/3914094/watch?utm_source=WatchAction&utm_medium=MovieWatchAction&utm_campaign=oppenheimer'"
+                  style="margin-left: 60px;">Click Here To Watch</div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>OPENHEIMER</h3>
+                <p>"Oppenheimer"* is a biographical drama directed by Christopher Nolan, focusing on the life of J. Robert Oppenheimer, the physicist known as the "father of the atomic bomb." The film explores Oppenheimer’s pivotal role in the Manhattan Project, his moral dilemmas, and the profound impact of his work on both science and global politics. With a complex narrative, rich historical context, and powerful performances, particularly by Cillian Murphy as Oppenheimer, the movie offers an in-depth look at the personal and ethical struggles of a key figure in 20th-century history.</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Reviews</h4>
+                <h6 style="background-color: gainsboro;">👤Jasper Cole</h6>
+                <p style="background-color: antiquewhite;">I found Oppenheimer incredibly engaging; it balances intense drama with deep historical insight, making it both entertaining and enlightening.</p>
+                <h6 style="background-color: gainsboro;">👤Nina Patel</h6>
+                <p style="background-color: antiquewhite;">Oppenheimer is a gripping and thought-provoking film—Cillian Murphy's portrayal of the complex figure at its center is truly remarkable.</p>
+                <h6 style="background-color: gainsboro;">👤 cillian3$%</h6>
+                <p style="background-color: antiquewhite;">Oppenheimer offers a fascinating look at a pivotal moment in history, with a powerful performance and a story that keeps you hooked from start to finish.</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Reviews:⭐⭐⭐⭐ (6.1B)👍</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
